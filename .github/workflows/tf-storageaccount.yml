@@ -1,4 +1,4 @@
-name: 'AzureStorageAccount'
+name: 'terraform'
  
 on:
   push:
