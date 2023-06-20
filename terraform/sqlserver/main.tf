@@ -26,7 +26,7 @@ resource "azurerm_mssql_server" "sqldemo" {
   location                     = data.azurerm_resource_group.sqldemo.location
   version                      = "12.0"
   administrator_login          = "sushma"
-  administrator_login_password = "sushma123"
+  administrator_login_password = "Sushma@123"
   minimum_tls_version          = "1.2"
 
   #   azuread_administrator {
