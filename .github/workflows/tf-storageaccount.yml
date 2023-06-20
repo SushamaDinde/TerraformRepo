@@ -1,4 +1,4 @@
-name: 'terraform'
+name: 'Deply Storage account'
  
 on:
   push:
