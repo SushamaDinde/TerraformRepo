@@ -5,7 +5,11 @@ name: 'Deply Sql Server'
 #     branches:
 #     - main
 #   pull_request:
- 
+
+on:
+  release:
+    types: [created]
+  workflow_dispatch: # Put here!!
 jobs:
   terraform:
     name: 'AzureSQLServer'
