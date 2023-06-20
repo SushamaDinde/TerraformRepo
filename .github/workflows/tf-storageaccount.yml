@@ -1,10 +1,10 @@
 name: 'Deply Storage account'
  
-on:
-  push:
-    branches:
-    - main
-  pull_request:
+# on:
+#   push:
+#     branches:
+#     - main
+#   pull_request:
  
 jobs:
   terraform:
