@@ -10,7 +10,7 @@ on:
   release:
     types: [created]
   workflow_dispatch: # Put here!!
-  
+
 jobs:
   terraform:
     name: 'AzureStorageAccount'
@@ -60,10 +60,10 @@ jobs:
         tf_actions_subcommand: 'plan'
         tf_actions_working_dir: "./terraform/storageaccount"
  
-    - name: Terraform Apply
-      if: github.ref == 'refs/heads/main'
-      uses: hashicorp/terraform-github-actions@master
-      with:
-        tf_actions_version: 0.14.8
-        tf_actions_subcommand: 'apply'
-        tf_actions_working_dir: "./terraform/storageaccount"
+    # - name: Terraform Apply
+    #   if: github.ref == 'refs/heads/main'
+    #   uses: hashicorp/terraform-github-actions@master
+    #   with:
+    #     tf_actions_version: 0.14.8
+    #     tf_actions_subcommand: 'apply'
+    #     tf_actions_working_dir: "./terraform/storageaccount"
