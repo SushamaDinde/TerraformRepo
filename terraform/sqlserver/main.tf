@@ -21,7 +21,7 @@ data "azurerm_resource_group" "sqldemo" {
 }
 
 resource "azurerm_mssql_server" "sqldemo" {
-  name                         = "sqlserverdemo"
+  name                         = "sqlserversushma"
   resource_group_name          = data.azurerm_resource_group.sqldemo.name
   location                     = data.azurerm_resource_group.sqldemo.location
   version                      = "12.0"
