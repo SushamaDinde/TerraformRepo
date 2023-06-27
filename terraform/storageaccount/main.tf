@@ -34,7 +34,7 @@ resource "azurerm_storage_account" "sa-demo" {
   account_tier             = "Standard"
   account_replication_type = "LRS"
   network_rules {
-    default_action = "Deny"
+    default_action             = "Deny"
     virtual_network_subnet_ids = [data.azurerm_subnet.datasubnet.id]
   }
 }
