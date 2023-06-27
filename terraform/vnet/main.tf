@@ -38,5 +38,11 @@ resource "azurerm_virtual_network" "vnet-sushma" {
 
   }
 
+  subnet {
+    name           = "storagesubnet"
+    address_prefix = "10.0.3.0/24"
+
+  }
+
 
 }
