@@ -26,13 +26,8 @@ resource "azurerm_mssql_server" "sqldemo" {
   location                     = data.azurerm_resource_group.sqldemo.location
   version                      = "12.0"
   administrator_login          = "sushma"
-  administrator_login_password = "Sushma@12345678"
+  administrator_login_password = "MumAbc@2023"
   minimum_tls_version          = "1.2"
-
-  #   azuread_administrator {
-  #     login_username = "AzureAD Admin"
-  #     object_id      = "00000000-0000-0000-0000-000000000000"
-  #   }
 
   #   tags = {
   #     environment = "production"
