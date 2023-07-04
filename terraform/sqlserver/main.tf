@@ -21,7 +21,7 @@ data "azurerm_resource_group" "varrgdemo" {
 }
 
 resource "azurerm_sql_server" "sqlserverdemo2" {
-  name                         = "sqldemo2"
+  name                         = "sqlsushmademo2"
   resource_group_name          = data.azurerm_resource_group.varrgdemo.name
   location                     = data.azurerm_resource_group.varrgdemo.location
   version                      = "12.0"
