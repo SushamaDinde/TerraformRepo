@@ -3,7 +3,7 @@ terraform {
     resource_group_name  = "tamopstfstates"
     storage_account_name = "sushamatf"
     container_name       = "tfstatedevops"
-    key                  = "terraformgithubexample.tfstate"
+    key                  = "terraformgithubstorageaccount.tfstate"
   }
 }
 
@@ -15,3 +15,17 @@ provider "azurerm" {
 }
 
 data "azurerm_client_config" "current" {}
+
+data "azurerm_resource_group" "varrgdemo" {
+  name = "rg-demo2"
+}
+
+resource "azurerm_storage_account" "demostorageaccount" {
+  name                     = "sa-sushma"
+  resource_group_name      = data.azurerm_resource_group.varrgdemo.name
+  location                 = data.azurerm_resource_group.varrgdemo.location
+  account_tier             = "Standard"
+  account_replication_type = "GRS"
+
+
+}
