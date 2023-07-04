@@ -15,21 +15,3 @@ provider "azurerm" {
 }
 
 data "azurerm_client_config" "current" {}
-
-data "azurerm_resource_group" "sqldemo" {
-  name = "rg-demo"
-}
-
-resource "azurerm_mssql_server" "sqldemo" {
-  name                         = "sqlserversushma"
-  resource_group_name          = data.azurerm_resource_group.sqldemo.name
-  location                     = data.azurerm_resource_group.sqldemo.location
-  version                      = "12.0"
-  administrator_login          = "sushma"
-  administrator_login_password = "MumAbc@2023"
-  minimum_tls_version          = "1.2"
-
-  #   tags = {
-  #     environment = "production"
-  #   }
-}
