@@ -21,7 +21,7 @@ data "azurerm_resource_group" "varrgdemo" {
 }
 
 resource "azurerm_storage_account" "demostorageaccount" {
-  name                     = "sa-sushma"
+  name                     = "sasushma"
   resource_group_name      = data.azurerm_resource_group.varrgdemo.name
   location                 = data.azurerm_resource_group.varrgdemo.location
   account_tier             = "Standard"
